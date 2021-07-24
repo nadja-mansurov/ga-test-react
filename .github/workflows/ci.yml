@@ -35,11 +35,12 @@ jobs:
         if: github.event_name == 'push'
         run: npm run build
       - name: Upload Build Folder
+        if: github.event_name == 'push'
         uses: actions/upload-artifacts@v1
         with:
           name: build
           path: build
-      - uses: actions/download-artifact        
+      - uses: actions/download-artifact@v1        
       - name: Deploy to Staging
         if: github.event_name == 'push'
         run: npx surge --projects ./build --domain https://awake-person.surge.sh/
