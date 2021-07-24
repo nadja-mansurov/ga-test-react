@@ -38,10 +38,8 @@ jobs:
         if: github.event_name == 'push'
         uses: actions/upload-artifact@v1
         with:
-          name: build
+          name: code-build
           path: build
-      - uses: actions/download-artifact@v1
-        if: github.event_name == 'push'
       - name: Deploy to Staging
         if: github.event_name == 'push'
         run: npx surge --projects ./build --domain https://awake-person.surge.sh/
