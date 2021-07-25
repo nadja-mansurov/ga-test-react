@@ -2,5 +2,4 @@ FROM alpine:3.11
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"] 
-#CMD ['dwd', 'dwd']
+ENTRYPOINT [ "/entrypoint.sh" ] 

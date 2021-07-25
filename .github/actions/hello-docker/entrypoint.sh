@@ -1,5 +1,12 @@
 #!/bin/sh/ -l
 
+if [ true ]
+then
+  echo 'error'
+  exit 1
+fi
+
+
 echo "::debug ::Debug Message"
 echo "::warning ::Warning Message"
 echo "::error ::Error Message"
@@ -16,4 +23,4 @@ echo 'some stuff'
 echo 'some stuff'
 echo "::endgroup::"
 
-echo '::set-env name=TEST::test var'
+echo '::set-env name=TEST::test'
