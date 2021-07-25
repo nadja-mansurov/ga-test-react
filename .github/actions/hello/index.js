@@ -4,9 +4,9 @@ const github = require("@actions/github");
 try {
   //throw( new Error("some error") )
 
-  core.debug('Debug message');
-  core.warning('Warn message');
-  core.error('Error message');
+  core.debug("Debug message");
+  core.warning("Warn message");
+  core.error("Error message");
   const name = core.getInput("who-to-greet");
   const surname = name;
   core.setSecret(surname);
@@ -15,7 +15,7 @@ try {
   const time = new Date();
   core.setOutput("time", time.toTimeString());
 
-  core.startGroup('Logging github object');
+  core.startGroup("Logging github object");
   console.log(JSON.stringify(github, null, "\t"));
   core.endGroup();
   core.exportVariable("TEST", "test var");
