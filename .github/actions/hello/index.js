@@ -2,8 +2,10 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 try {
-  throw( new Error("some error") )
+  //throw( new Error("some error") )
 
+  core.debug('Debug message');
+  core.warn('Warn message');
   const name = core.getInput("who-to-greet");
   console.log(`Hello ${name}`);
 
@@ -12,5 +14,6 @@ try {
 
   console.log(JSON.stringify(github, null, "\t"));
 } catch (e) {
+  core.error('Error message');
   core.setFailed(e);
 }
