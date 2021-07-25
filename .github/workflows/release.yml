@@ -1,7 +1,7 @@
 name: Notify on Release
 on:
-  issues:
-    types: [opened]
+  release:
+    types: [published]
 
 jobs:
   slack-message:
