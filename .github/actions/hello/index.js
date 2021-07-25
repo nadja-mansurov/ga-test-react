@@ -5,7 +5,7 @@ try {
   //throw( new Error("some error") )
 
   core.debug('Debug message');
-  core.warn('Warn message');
+  core.warning('Warn message');
   core.error('Error message');
   const name = core.getInput("who-to-greet");
   const surname = core.setSecret('test');
