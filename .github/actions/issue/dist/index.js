@@ -4468,7 +4468,7 @@ module.exports = /******/ (function (modules, runtime) {
             ...github.context.repo,
             title,
             body,
-            assignees: assignees ? assignees.split("\n") : undefined,
+            assignees: assignees ? assignees.split(",") : undefined,
           });
 
           core.setOutput("issue", JSON.stringify(response.data));
