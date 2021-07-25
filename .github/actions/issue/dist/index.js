@@ -4462,7 +4462,7 @@ module.exports = /******/ (function (modules, runtime) {
           const title = core.getInput("title");
           const body = core.getInput("body");
           const assignees = core.getInput("assignees");
-          const octokit = new github.GitHub(token);
+          const octokit = new github.getOctokit(token);
 
           const reponse = await octokit.rest.issues.create({
             ...github.context.repo,
