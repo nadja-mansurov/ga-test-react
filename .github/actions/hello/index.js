@@ -8,7 +8,7 @@ try {
   core.warning('Warn message');
   core.error('Error message');
   const name = core.getInput("who-to-greet");
-  const surname = core.getInput("who-to-greet");
+  const surname = name;
   core.setSecret(surname);
   console.log(`Hello ${name}, your surname is ${surname}`);
 
